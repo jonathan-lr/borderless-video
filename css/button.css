@@ -2,8 +2,8 @@
     background: #4285f4;
     color: white;
     position: fixed;
-    top: 0;
-    left: 0;
+    right: 0;
+    top: calc(50vh - 60px);
     width: 120px;
     height: 60px;
     font-weight: 700;
