@@ -12,20 +12,9 @@
     box-shadow: 1px 1px 3px 0px black;
     opacity: 0;
     transition: 0.5s;
-    z-index: 101;
+    z-index: 69420;
 }
 
 #fullButt:hover {
     opacity: 1;
-}
-
-.fullBody {
-    overflow: hidden;
-}
-
-.videoPlayer {
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    z-index: 100;
 }

@@ -19,9 +19,14 @@
   ],
   "content_scripts" : [
     {
-      "js" : ["./src/init.js"],
-      "css": ["./src/styles.css"],
+      "js" : ["./src/9anime/init.js"],
+      "css": ["./css/9anime/styles.css", "./css/button.css"],
       "matches" : ["https://9anime.ru/*"]
+    },
+    {
+      "js" : ["./src/youtube/init.js"],
+      "css": ["./css/youtube/styles.css", "./css/button.css"],
+      "matches" : ["https://www.youtube.com/*"]
     }
   ]
 }
