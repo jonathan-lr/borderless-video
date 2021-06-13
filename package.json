@@ -1,0 +1,24 @@
+{
+  "name": "borderless-video",
+  "version": "1.0.0",
+  "description": "full screen video",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathan-lr/borderless-video.git"
+  },
+  "keywords": [
+    "fullscreen",
+    "video",
+    "borderless"
+  ],
+  "author": "Red",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/jonathan-lr/borderless-video/issues"
+  },
+  "homepage": "https://github.com/jonathan-lr/borderless-video#readme"
+}
