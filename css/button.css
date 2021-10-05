@@ -1,20 +1,31 @@
-#fullButt {
-    background: #4285f4;
-    color: white;
+.borderlessPanel {
+    top: calc(50vh - 200px);
     position: fixed;
     right: 0;
-    top: calc(50vh - 60px);
+    width: 125px;
+    height: 200px;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 69420;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    border-radius: 10px 0 0 10px;
+    background: #3171a4;
+}
+
+.borderlessPanel:hover {
+    opacity: 1;
+}
+
+.borderlessButton {
+    background: #4285f4;
+    color: white;
     width: 120px;
     height: 60px;
     font-weight: 700;
     font-size: 20px;
     border: none;
     box-shadow: 1px 1px 3px 0px black;
-    opacity: 0;
-    transition: 0.5s;
-    z-index: 69420;
-}
-
-#fullButt:hover {
-    opacity: 1;
 }

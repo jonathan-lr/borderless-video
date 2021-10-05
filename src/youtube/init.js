@@ -1,10 +1,18 @@
 (function () {
+    function createPanel() {
+        var div = document.createElement("div");
+        div.id = "borderlessPanel";
+        div.classList.add("borderlessPanel");
+        document.getElementsByTagName("BODY")[0].appendChild(div);
+    }
+
     function addButton() {
         var btn = document.createElement("input");
         btn.value = "Full";
         btn.id = "fullButt";
         btn.type = "submit";
-        document.getElementsByTagName("BODY")[0].appendChild(btn);
+        btn.classList.add("borderlessButton");
+        document.getElementById("borderlessPanel").appendChild(btn);
     }
 
     function eventManager() {
@@ -27,6 +35,7 @@
             });
     }
 
+    createPanel();
     addButton();
     eventManager();
 })();

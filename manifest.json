@@ -21,7 +21,7 @@
     {
       "js" : ["./src/9anime/init.js"],
       "css": ["./css/9anime/styles.css", "./css/button.css"],
-      "matches" : ["https://9anime.ru/*"]
+      "matches" : ["https://9anime.id/*"]
     },
     {
       "js" : ["./src/youtube/init.js"],
