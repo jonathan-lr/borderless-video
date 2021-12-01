@@ -1,4 +1,26 @@
 (function () {
+    function GoInFullscreen(element) {
+        if(element.requestFullscreen)
+            element.requestFullscreen();
+        else if(element.mozRequestFullScreen)
+            element.mozRequestFullScreen();
+        else if(element.webkitRequestFullscreen)
+            element.webkitRequestFullscreen();
+        else if(element.msRequestFullscreen)
+            element.msRequestFullscreen();
+    }
+
+    function GoOutFullscreen() {
+        if(document.exitFullscreen)
+            document.exitFullscreen();
+        else if(document.mozCancelFullScreen)
+            document.mozCancelFullScreen();
+        else if(document.webkitExitFullscreen)
+            document.webkitExitFullscreen();
+        else if(document.msExitFullscreen)
+            document.msExitFullscreen();
+    }
+
     function createPanel() {
         var div = document.createElement("div");
         div.id = "borderlessPanel";
@@ -51,9 +73,11 @@
                 if (body.classList.contains("fullBody")){
                     body.classList.remove("fullBody");
                     player.classList.remove("videoPlayer")
+                    GoOutFullscreen();
                 } else {
                     body.classList.add("fullBody");
                     player.classList.add("videoPlayer")
+                    GoInFullscreen(document.body);
                 }
             });
 
