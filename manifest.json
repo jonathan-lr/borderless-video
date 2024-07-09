@@ -1,7 +1,7 @@
 {
   "name": "borderless-video",
   "version": "0.0.1",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "description": "Yeet",
   "homepage_url": "http://kashoot.co.uk",
   "icons": {
@@ -10,7 +10,7 @@
     "128": "icons/icon128.png"
   },
   "default_locale": "en",
-  "browser_action": {
+  "action": {
     "default_icon": "icons/icon19.png",
     "default_title": "browser action demo"
   },
@@ -21,12 +21,13 @@
     {
       "js" : ["./src/9anime/init.js"],
       "css": ["./css/9anime/styles.css", "./css/button.css"],
-      "matches" : ["https://9anime.id/*"]
+      "matches" : ["https://aniwave.to/*"]
     },
     {
-      "js" : ["./src/youtube/init.js"],
+      "js" : ["./src/video/video.js"],
       "css": ["./css/youtube/styles.css", "./css/button.css"],
-      "matches" : ["https://www.youtube.com/*"]
+      "matches" : ["https://www.youtube.com/*"],
+      "run_at" : "document_idle"
     }
   ]
 }

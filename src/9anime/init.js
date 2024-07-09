@@ -1,4 +1,8 @@
 (function () {
+    function getElementByXpath(path) {
+        return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+    }
+
     function GoInFullscreen(element) {
         if(element.requestFullscreen)
             element.requestFullscreen();
@@ -32,6 +36,15 @@
         var btn = document.createElement("input");
         btn.value = "Full";
         btn.id = "fullButt";
+        btn.type = "submit";
+        btn.classList.add("borderlessButton");
+        document.getElementById("borderlessPanel").appendChild(btn);
+    }
+
+    function addFullButton() {
+        var btn = document.createElement("input");
+        btn.value = "Full Full";
+        btn.id = "fullFullButt";
         btn.type = "submit";
         btn.classList.add("borderlessButton");
         document.getElementById("borderlessPanel").appendChild(btn);
@@ -73,6 +86,18 @@
                 if (body.classList.contains("fullBody")){
                     body.classList.remove("fullBody");
                     player.classList.remove("videoPlayer")
+                } else {
+                    body.classList.add("fullBody");
+                    player.classList.add("videoPlayer")
+                }
+            });
+
+        document
+            .getElementById("fullFullButt")
+            .addEventListener("click", function (event) {
+                if (body.classList.contains("fullBody")){
+                    body.classList.remove("fullBody");
+                    player.classList.remove("videoPlayer")
                     GoOutFullscreen();
                 } else {
                     body.classList.add("fullBody");
@@ -84,13 +109,13 @@
         document
             .getElementById("nextButt")
             .addEventListener("click", function (event) {
-                document.getElementsByClassName("next")[0].click()
+                getElementByXpath("//*[@id=\"controls\"]/div[1]/div[8]").click()
             });
 
         document
             .getElementById("prevButt")
             .addEventListener("click", function (event) {
-                document.getElementsByClassName("prev")[0].click()
+                getElementByXpath("//*[@id=\"controls\"]/div[1]/div[7]").click()
             });
 
         /*document
@@ -102,6 +127,7 @@
 
     createPanel();
     addButton();
+    addFullButton();
     addNextButton();
     addPrevButton();
     eventManager();
